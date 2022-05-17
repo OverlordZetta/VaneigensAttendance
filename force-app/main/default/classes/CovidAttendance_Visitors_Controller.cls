@@ -1,5 +1,5 @@
 public without sharing class  CovidAttendance_Visitors_Controller {
-    
+    //change
     Public Static Final String VisitorRT =  'Visitor_Attendance';
     Public Static Final String vaneigensAccount = 'Vaneigens';
     public static Final Id RT_Visitor = Schema.SObjectType.Day_in_the_office__c.getRecordTypeInfosByDeveloperName().get(VisitorRT).getRecordTypeId();
