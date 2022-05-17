@@ -1,7 +1,7 @@
 import { LightningElement, wire, api,track} from 'lwc';
-import ATTENDANCEDATE_FIELD from '@salesforce/schema/Day_In_The_Office__c.Attendance_Date__c';
-import ATTENDEENAME_FIELD from '@salesforce/schema/Day_In_The_Office__c.AttendeeName__c';
-import DAYOFTHEWEEK_FIELD from '@salesforce/schema/Day_In_The_Office__c.Day_of_the_Week__c';
+import ATTENDANCEDATE_FIELD from '@salesforce/schema/Day_in_the_office__c.Attendance_Date__c';
+import ATTENDEENAME_FIELD from '@salesforce/schema/Day_in_the_office__c.AttendeeName__c';
+import DAYOFTHEWEEK_FIELD from '@salesforce/schema/Day_in_the_office__c.Day_of_the_Week__c';
 import currentUserId from '@salesforce/user/Id';
 import getMyAttendances from '@salesforce/apex/attendanceDataController.getAttendanceData';
 import { refreshApex } from '@salesforce/apex';

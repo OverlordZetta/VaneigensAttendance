@@ -1,0 +1,6 @@
+<aura:component implements="flexipage:availableForAllPageTypes,lightning:availableForFlowScreens,lightning:availableForFlowActions" access="global"  >
+	
+    <lightning:messageChannel type="RefreshMessage__c"
+            aura:id="RefreshMessageChannel"/>
+    
+</aura:component>
