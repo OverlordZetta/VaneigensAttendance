@@ -1,0 +1,59 @@
+<template>
+    
+    
+    <lightning-card>
+        <div style="margin:10px;"> 
+            <div class="demo-3">
+                <div class="main">
+                    <h1>Who's coming tomorrow</h1>
+                </div>
+            </div>   
+            
+            <template if:true={attendeesEmployees}>
+                <div class="demo-3">
+                    <div class="main">
+                        <h3>Employees </h3>
+                        
+                        <template for:each={attendeesEmployees} for:item="att">
+                            <p class="standardtext" key={att.Id}><a key={att.Id} target="_blank"  style="text-decoration:none;" href={att.redirectUrl}> - {att.AttendeeName__c}</a></p>
+                        </template>
+                    </div>
+                </div>
+            </template>
+            
+            
+            
+            
+            
+            <template if:true={attendeesVisitor}>
+                <div class="demo-3">
+                    <div class="main">
+                        <h3>Visitors </h3>
+                        
+                        <template for:each={attendeesVisitor} for:item="att">
+                            <p class="standardtext" key={att.Id}><a key={att.Id} target="_blank"  style="text-decoration:none" href={att.redirectUrl}> - {att.AttendeeName__c}</a></p>
+                        </template>
+                    </div>
+                </div>
+                
+                
+                
+            </template>
+            
+            <template if:true={errorTomorrowAttendees}>
+                {errorTomorrowAttendees}
+            </template>
+            
+            <template if:false={isThereSomeone}>
+                <div class="demo-3">
+                    <div class="main">
+                        <h3>Well, it seems that no one is coming... </h3>
+                    </div>
+                </div>
+            </template>
+            
+            
+            
+        </div>
+    </lightning-card>
+</template>

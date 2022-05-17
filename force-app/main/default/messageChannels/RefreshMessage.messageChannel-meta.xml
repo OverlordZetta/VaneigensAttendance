@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>RefreshMessage</masterLabel>
+    <isExposed>true</isExposed>
+    <description>Re-usable Message Channel to tell LWC to refresh apex</description>
+     <lightningMessageFields>
+        <fieldName>data</fieldName>
+        <description>This is in case you need to send Data</description>
+    </lightningMessageFields>
+</LightningMessageChannel>

@@ -1,0 +1,25 @@
+<template>
+    <lightning-card>
+        <div class="demo-3" style="margin:20px;">
+            <lightning-record-edit-form>
+                <div class="main">
+                    <h1>Book an Attendance</h1>
+                    <lightning-layout multiple-rows>
+                        
+                        <lightning-layout-item padding="around-small" size="12" medium-device-size="6" large-device-size="6">
+                            <lightning-input  onchange={handleChange} name="firstName" class="validate" required type="text" label="First Name"></lightning-input>
+                            <lightning-input onchange={handleChange} name="lastName"  class="validate" required type="text" label="Last Name"></lightning-input>
+                        </lightning-layout-item>
+                        <lightning-layout-item padding="around-small" size="12" medium-device-size="6" large-device-size="6">
+                            <lightning-input onchange={handleChange} name="email" class="validate" required type="email" label="Email"></lightning-input>
+                            <lightning-input onchange={handleChange} name="attendanceDate" class="validate" required type="date" label="Attendance Date"></lightning-input>
+                        </lightning-layout-item>
+                        <br/>
+                        <lightning-button variant="brand" class="slds-align_absolute-center" label="Save" onclick={handleSave}>
+                        </lightning-button>
+                    </lightning-layout>
+                </div>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>

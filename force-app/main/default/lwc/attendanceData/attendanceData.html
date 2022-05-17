@@ -1,0 +1,42 @@
+<template>
+    
+    
+    <lightning-card>
+        <div style="margin:10px;">
+            <div class="demo-3">
+                <div class="main">
+                    <h1>Attendance Overview</h1>
+                </div>
+            </div>
+
+            <div class="standardtext">Select filter :</div>
+            
+            <lightning-combobox
+            name="filterbox"
+            value={filterValue}
+            placeholder="Select Progress"
+            options={options}
+            onchange={handleChange} ></lightning-combobox>
+
+            <div class="demo-3">
+                <div class="main">
+                    <h3>My Attendances :  {numberOfAttendances}</h3>
+                </div>
+            </div>
+            
+            <template if:true={attendances.data}>
+
+            <lightning-datatable
+            key-field="Id"
+            data={attendances.data}
+            columns={columns} 
+            hide-checkbox-column="true">
+        </lightning-datatable>
+        </template>
+        <template if:false={attendances.data}>
+        <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+        </template>
+
+    </div>
+</lightning-card>
+</template>
