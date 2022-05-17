@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Attendance_only_tomorrow_for_Employees</fullName>
+    <active>true</active>
+    <errorConditionFormula>$User.ByPassVR__c = false
+	&amp;&amp;
+IF(RecordType.DeveloperName = &quot;Employee_Attendance&quot; &amp;&amp;  Attendance_Date__c != (TODAY()+1),true,false)</errorConditionFormula>
+    <errorDisplayField>Attendance_Date__c</errorDisplayField>
+    <errorMessage>You can only register for tomorrow.</errorMessage>
+</ValidationRule>

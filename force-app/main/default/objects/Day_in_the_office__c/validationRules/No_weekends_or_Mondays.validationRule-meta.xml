@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_weekends_or_Mondays</fullName>
+    <active>true</active>
+    <errorConditionFormula>$User.ByPassVR__c = false
+	&amp;&amp;
+IF(Day_In_the_Week__c =1  || Day_In_the_Week__c = 2,true,false)</errorConditionFormula>
+    <errorDisplayField>Attendance_Date__c</errorDisplayField>
+    <errorMessage>You cannot register for an attendance in Mondays Or Weekends.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Employee_Attendances</fullName>
+    <columns>Attendance_Date__c</columns>
+    <columns>Day_of_the_Week__c</columns>
+    <columns>Attendee__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Day_in_the_office__c.Employee_Attendance</value>
+    </filters>
+    <label>Employee Attendances</label>
+    <sharedTo>
+        <group>HR_Group</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Attendances</fullName>
+    <columns>Attendee__c</columns>
+    <columns>Attendance_Date__c</columns>
+    <columns>Day_of_the_Week__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>isCurrentUserAttendee__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>My Attendances</label>
+</ListView>

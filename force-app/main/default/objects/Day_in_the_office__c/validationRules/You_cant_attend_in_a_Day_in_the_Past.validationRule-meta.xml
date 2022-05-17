@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>You_cant_attend_in_a_Day_in_the_Past</fullName>
+    <active>true</active>
+    <errorConditionFormula>Attendance_Date__c &lt; TODAY()</errorConditionFormula>
+    <errorDisplayField>Attendance_Date__c</errorDisplayField>
+    <errorMessage>You can&apos;t attend in the past!</errorMessage>
+</ValidationRule>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AttendeeName__c</fullName>
+    <externalId>false</externalId>
+    <formula>If(Attendee__c &lt;&gt; null,Attendee__r.LastName + &apos; &apos; +  Attendee__r.FirstName,&apos;&apos;)
+&amp;
+If(Visitor__c &lt;&gt; null, Visitor__r.LastName + &apos; &apos; + Visitor__r.FirstName,&apos;&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>AttendeeName</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
